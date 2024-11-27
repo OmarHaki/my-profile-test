@@ -1,0 +1,117 @@
+/* استيراد الخط */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+/* نمط للجسم */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* الحاوية الرئيسية */
+.profile-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* الصورة الشخصية */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    animation: slideUp 1.5s ease-out forwards;
+}
+
+/* المسمى الوظيفي والمعلومات */
+h1 {
+    margin: 10px 0 5px 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+}
+
+.job-title {
+    font-size: 18px;
+    color: #666;
+}
+
+.contact-info {
+    margin: 5px 0;
+    color: #333;
+}
+
+/* أيقونات السوشيال ميديا */
+.social-icons a {
+    display: inline-block;
+    margin: 10px 15px;
+    text-decoration: none;
+    color: #0077b5;
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #005582;
+    transform: scale(1.1);
+}
+
+/* الحركات */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* تجاوبي مع الشاشات الصغيرة */
+@media only screen and (max-width: 600px) {
+    .profile-container {
+        padding: 20px;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .job-title {
+        font-size: 16px;
+    }
+
+    .social-icons a {
+        font-size: 18px;
+        margin: 8px 10px;
+    }
+}
